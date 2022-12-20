@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "list.h"
 
+void exibir(LISTA* lista);
 int main(){
 
     //inicializando a lista
@@ -45,6 +46,25 @@ int main(){
     }
      */
 
-    
+   for (int x = 1; x <= 10; x++)
+    {
+        add(lista, x);
+    }
+
+    LISTA* l=init();
+    add(l, 24);
+    add(l, 28);
+    add(l, 33);
+   //addRange(lista,l );
+   
+
+    exibir(lista);
     return 0;
+}
+
+void exibir(LISTA* lista){
+       for(int x = 0; x < len(lista); x++){
+        printf("%d\n", getValue(lista, x));
+    }
+    return;
 }

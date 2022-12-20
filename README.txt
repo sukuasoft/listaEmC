@@ -1,3 +1,5 @@
+//Funcionalidades das listas em C
+
 --> contem,
 --> add
 
@@ -5,15 +7,18 @@
 --> getValue
 
 --> remove
+--> remove pelo indice
 
-remove pelo indice
-addrange
-REMOVE RANGE
+
+--> addrange
+--> REMOVE RANGE
 
 --> len
+--> insert
+--> reverse
 
-insert
-insertrange
+--> insertrange
+--> GET RANGE
 
-reverse
-GET RANGE
+--> clear
+toArray
