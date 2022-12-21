@@ -21,4 +21,4 @@
 --> GET RANGE
 
 --> clear
-toArray
+--> toArray

@@ -1,10 +1,12 @@
 #include  <stdio.h>
 #include <stdlib.h>
 #include "list.h"
+#include <malloc.h>
 
 void exibir(LISTA* lista);
 int main(){
 
+    system("cls");
     //inicializando a lista
    // int *p = malloc(1);
 
@@ -48,6 +50,7 @@ int main(){
 
    for (int x = 1; x <= 10; x++)
     {
+        
         add(lista, x);
     }
 
@@ -55,9 +58,13 @@ int main(){
     add(l, 24);
     add(l, 28);
     add(l, 33);
-   //addRange(lista,l );
-   
+  //  add(l, 34);
 
+  //  printf("---");
+  //  printf("lista size: %d", sizeof(lista) / sizeof(int));
+    printf("--\n");
+    addRange(lista,l);
+    system("cls");
     exibir(lista);
     return 0;
 }

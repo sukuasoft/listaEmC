@@ -6,6 +6,7 @@
             "command": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",
+                "C:\\Users\\JOAO\\Documents\\ADMIRO\\Projectos\\VS Code\\C\\lista\\list.o",
                 "-g",
                 "${file}",
                 "-o",
@@ -16,6 +17,26 @@
             },
             "problemMatcher": [
                 "$gcc"
+            ],
+            "group": "build",
+            "detail": "Tarefa gerada pelo Depurador."
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe arquivo de build ativo",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
             ],
             "group": {
                 "kind": "build",

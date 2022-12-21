@@ -1,6 +1,7 @@
 #include "list.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <malloc.h>
 
 LISTA *init()
 {
@@ -14,6 +15,12 @@ int len(LISTA *list)
 
 void add(LISTA *list, int value)
 {
+  
+    if(_msize((LISTA *) list) < 1){
+    
+        return;
+    }
+
     if (_msize((LISTA *) list) == 1)
     {
         realloc((LISTA *) list, sizeof(int));
@@ -22,10 +29,15 @@ void add(LISTA *list, int value)
 
     else
     {
-        int size = len((LISTA *) list);
-        realloc((LISTA *) list, sizeof(int) * (size + 1));
+        size_t size = len((LISTA *) list);
+       // printf("%d  ", size);
+        printf("%i\n", size);
+    
+        realloc( list, sizeof(int) * (size + 1));
         *(list + size) = value;
+      
     }
+   return;
 }
 
 int contains(LISTA *list, int value)
@@ -152,13 +164,15 @@ LISTA *reverse(LISTA *lista)
 }
 
 // range
-/*
+
 void addRange(LISTA *list, LISTA *listRange)
 {
     for (int x = 0; x < len(listRange); x++)
     {  
         add(list, getValue(listRange, x));
     }
+
+    return;
 }
 
 void removeRange(LISTA *list, LISTA *listRange)
@@ -167,6 +181,8 @@ void removeRange(LISTA *list, LISTA *listRange)
     {
         removeValue(&list, getValue(listRange, x));
     }
+
+    return;
 }
 
 void insertRange(LISTA *list, LISTA *listRange, int index)
@@ -176,6 +192,7 @@ void insertRange(LISTA *list, LISTA *listRange, int index)
         insertValue(&list, getValue(listRange, x), index);
         index++;
     }
+    return;
 }
 
 LISTA *getRange(LISTA *list, int index, int count)
@@ -203,7 +220,7 @@ LISTA *getRange(LISTA *list, int index, int count)
 
     return ls;
 }
-*/
+
 
 //outros
 

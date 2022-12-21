@@ -1,4 +1,4 @@
-run:
+run: clean  build
 	listApp.exe
 
 clean:

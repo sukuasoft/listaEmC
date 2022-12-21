@@ -15,10 +15,10 @@
 
     //RANGE OU SEJA LISTAS
 
-   // void addRange(LISTA* list, LISTA* listRange);
-   //  void removeRange(LISTA* list, LISTA* listRange);
-    // void insertRange(LISTA* list, LISTA* listRange, int index);
-    // LISTA *getRange(LISTA *list, int index, int count);
+   void addRange(LISTA* list, LISTA* listRange);
+    void removeRange(LISTA* list, LISTA* listRange);
+    void insertRange(LISTA* list, LISTA* listRange, int index);
+    LISTA *getRange(LISTA *list, int index, int count);
     
 
     //outros
